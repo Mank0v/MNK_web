@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruby — язык программирования</title>
+    <link rel="icon" href="./images/ruby-icon.png" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body id="top">
+    <header>
+      <h1>Ruby — язык, созданный для счастья программиста</h1>
+      <p class="subtitle">
+        <em>Небольшая статья об истории, особенностях и коде на Ruby</em>
+      </p>
+    </header>
+
+    <nav aria-label="Содержание">
+      <h2>Содержание</h2>
+      <ol>
+        <li><a href="#history">История создания</a></li>
+        <li><a href="#overview">Краткий обзор языка</a></li>
+        <li><a href="#examples">Примеры кода</a></li>
+        <li><a href="#used-technologies">Использованные теги и CSS-свойства</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <section id="history">
+        <h2>История создания</h2>
+        <figure class="figure-left">
+          <img src="./images/matz.jpg" alt="Юкихиро Мацумото" />
+          <figcaption>Юкихиро «Мац» Мацумото</figcaption>
+        </figure>
+        <p>
+          Язык <strong>Ruby</strong> создал японский программист
+          <b>Юкихиро Мацумото</b>, которого все называют просто «Мац». Работу
+          над языком он начал <time datetime="1993-02-24">24 февраля 1993
+          года</time>, а первая публичная версия вышла в
+          <time datetime="1995-12-21">декабре 1995 года</time>. Мац хотел
+          получить язык более объектно-ориентированный, чем <i>Perl</i>, и
+          более удобный, чем <i>Python</i>. Он взял идеи из Perl, Smalltalk,
+          Eiffel, Ada и Lisp.
+        </p>
+        <p>
+          Название языка выбрали в шутку: у Perl («жемчужина») и у Ruby
+          («рубин») названия связаны с драгоценными камнями<sup>1</sup>. Главный
+          принцип, которым руководствовался автор, он описал так:
+        </p>
+        <blockquote>
+          <q>Я хочу, чтобы программисты были счастливы</q> —
+          <cite>Юкихиро Мацумото</cite>
+        </blockquote>
+        <p>
+          Долгое время Ruby был известен в основном в Японии. Всё изменилось в
+          2004 году, когда Дэвид Хайнемайер Хансон выпустил веб-фреймворк
+          <mark>Ruby on Rails</mark>. Благодаря ему язык быстро стал популярен
+          во всём мире. На Ruby написаны, например, <u>GitHub</u> и
+          <u>Shopify</u>. Сейчас язык развивается как проект с открытым
+          исходным кодом<sup>2</sup>.
+        </p>
+
+        <figure class="figure-right">
+          <img src="./images/ruby-logo.png" alt="Логотип Ruby" />
+          <figcaption>Логотип Ruby</figcaption>
+        </figure>
+        <p>Ключевые события в истории языка:</p>
+        <ol>
+          <li>1993 год — Мац начинает разработку Ruby.</li>
+          <li>1995 год — выходит первая публичная версия 0.95.</li>
+          <li>1996 год — релиз Ruby 1.0.</li>
+          <li>2004 год — появление фреймворка Ruby on Rails.</li>
+          <li>2013 год — выход Ruby 2.0.</li>
+          <li>2020 год — выход Ruby 3.0, который стал втрое быстрее 2.0.</li>
+        </ol>
+        <p class="note">
+          <small>
+            <sup>1</sup> Рубин — камень июля, жемчуг — камень июня.
+            <sup>2</sup> Подробнее — на
+            <a href="https://ru.wikipedia.org/wiki/Ruby">Википедии</a>.
+          </small>
+        </p>
+
+        <h3 id="versions">Версии Ruby</h3>
+        <div class="table-wrapper">
+          <table class="versions-table">
+            <caption>
+              История выпусков Ruby, 1996–2024
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">№</th>
+                <th scope="col">Версия</th>
+                <th scope="col">Дата выхода</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">1</th><td>Ruby 1.0</td><td>25 декабря 1996 года</td></tr>
+              <tr><th scope="row">2</th><td>Ruby 1.8</td><td>4 августа 2003 года</td></tr>
+              <tr><th scope="row">3</th><td>Ruby 1.9</td><td>25 декабря 2007 года</td></tr>
+              <tr><th scope="row">4</th><td>Ruby 2.0</td><td>24 февраля 2013 года</td></tr>
+              <tr><th scope="row">5</th><td>Ruby 2.1</td><td>25 декабря 2013 года</td></tr>
+              <tr><th scope="row">6</th><td>Ruby 2.2</td><td>25 декабря 2014 года</td></tr>
+              <tr><th scope="row">7</th><td>Ruby 2.3</td><td>25 декабря 2015 года</td></tr>
+              <tr><th scope="row">8</th><td>Ruby 2.4</td><td>25 декабря 2016 года</td></tr>
+              <tr><th scope="row">9</th><td>Ruby 2.5</td><td>25 декабря 2017 года</td></tr>
+              <tr><th scope="row">10</th><td>Ruby 2.6</td><td>25 декабря 2018 года</td></tr>
+              <tr><th scope="row">11</th><td>Ruby 2.7</td><td>25 декабря 2019 года</td></tr>
+              <tr><th scope="row">12</th><td>Ruby 3.0</td><td>25 декабря 2020 года</td></tr>
+              <tr><th scope="row">13</th><td>Ruby 3.1</td><td>25 декабря 2021 года</td></tr>
+              <tr><th scope="row">14</th><td>Ruby 3.2</td><td>25 декабря 2022 года</td></tr>
+              <tr><th scope="row">15</th><td>Ruby 3.3</td><td>25 декабря 2023 года</td></tr>
+              <tr><th scope="row">16</th><td>Ruby 3.4</td><td>25 декабря 2024 года</td></tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">
+                  Новые версии Ruby традиционно выходят 25 декабря.
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <section id="overview">
+        <h2>Краткий обзор языка</h2>
+        <p>
+          Ruby — это <abbr title="Динамически типизированный">динамический</abbr>
+          интерпретируемый язык общего назначения. В нём <strong>всё является
+          объектом</strong>, даже числа и <code>nil</code>. Синтаксис похож на
+          английский язык, поэтому код читается легко. Программы на Ruby
+          запускаются командой <kbd>ruby file.rb</kbd>.
+        </p>
+
+        <h3>Основные особенности</h3>
+        <ul>
+          <li>чистый объектно-ориентированный подход;</li>
+          <li>динамическая типизация;</li>
+          <li>блоки, <code>proc</code> и лямбда-выражения;</li>
+          <li>примеси (<i>mixins</i>) вместо множественного наследования;</li>
+          <li>автоматическая сборка мусора.</li>
+        </ul>
+
+        <figure class="figure-center">
+          <img src="./images/rails.png" alt="Логотип Ruby on Rails" />
+          <figcaption>Ruby on Rails — самый известный фреймворк на Ruby</figcaption>
+        </figure>
+
+        <h3>Где применяется Ruby</h3>
+        <ul class="gem-list">
+          <li>веб-разработка (Ruby on Rails, Sinatra);</li>
+          <li>автоматизация и скрипты (Chef, Puppet);</li>
+          <li>тестирование (RSpec, Cucumber);</li>
+          <li>разработка игр (Ruby 2D, Gosu).</li>
+        </ul>
+
+        <h3>Термины</h3>
+        <dl>
+          <dt>Gem</dt>
+          <dd>пакет с библиотекой, который устанавливается командой <kbd>gem install</kbd>.</dd>
+          <dt>Блок</dt>
+          <dd>кусок кода, который передаётся методу, например в <code>each</code>.</dd>
+        </dl>
+        <p>
+          Больше информации — на
+          <a href="https://www.ruby-lang.org/ru/" target="_blank" rel="noopener">официальном сайте Ruby</a>.
+          Пример смотрите в разделе <a href="#examples">«Примеры кода»</a>.
+        </p>
+        <hr />
+      </section>
+
+      <section id="examples">
+        <h2>Примеры кода</h2>
+        <p>Вывод текста и работа с переменными:</p>
+        <pre class="code-lines"><code><span class="c-comment"># Привет, мир!</span>
+<span class="c-method">puts</span> <span class="c-string">"Привет, мир!"</span>
+
+<span class="c-variable">name</span> = <span class="c-string">"Анна"</span>
+<span class="c-variable">age</span> = <span class="c-number">18</span>
+<span class="c-method">puts</span> <span class="c-string">"#{name}, тебе #{age} лет"</span></code></pre>
+
+        <p>Класс и метод:</p>
+        <pre class="code-lines"><code><span class="c-keyword">class</span> <span class="c-class">Student</span>
+  <span class="c-keyword">attr_reader</span> <span class="c-symbol">:name</span>
+
+  <span class="c-keyword">def</span> <span class="c-method">initialize</span>(<span class="c-variable">name</span>, <span class="c-variable">course</span>)
+    <span class="c-ivar">@name</span> = <span class="c-variable">name</span>
+    <span class="c-ivar">@course</span> = <span class="c-variable">course</span>
+  <span class="c-keyword">end</span>
+
+  <span class="c-keyword">def</span> <span class="c-method">info</span>
+    <span class="c-string">"#{@name}, #{@course} курс"</span>
+  <span class="c-keyword">end</span>
+<span class="c-keyword">end</span>
+
+<span class="c-variable">student</span> = <span class="c-class">Student</span>.<span class="c-method">new</span>(<span class="c-string">"Богдан"</span>, <span class="c-number">2</span>)
+<span class="c-method">puts</span> <span class="c-variable">student</span>.<span class="c-method">info</span></code></pre>
+
+        <p>Массивы и блоки:</p>
+        <pre class="code-lines"><code><span class="c-variable">numbers</span> = [<span class="c-number">1</span>, <span class="c-number">2</span>, <span class="c-number">3</span>, <span class="c-number">4</span>, <span class="c-number">5</span>]
+
+<span class="c-variable">numbers</span>.<span class="c-method">each</span> <span class="c-keyword">do</span> |<span class="c-variable">n</span>|
+  <span class="c-keyword">if</span> <span class="c-variable">n</span>.<span class="c-method">even?</span>
+    <span class="c-method">puts</span> <span class="c-string">"#{n} — чётное"</span>
+  <span class="c-keyword">else</span>
+    <span class="c-method">puts</span> <span class="c-string">"#{n} — нечётное"</span>
+  <span class="c-keyword">end</span>
+<span class="c-keyword">end</span>
+
+<span class="c-variable">squares</span> = <span class="c-variable">numbers</span>.<span class="c-method">map</span> { |<span class="c-variable">n</span>| <span class="c-variable">n</span> * <span class="c-number">2</span> }
+<span class="c-method">p</span> <span class="c-variable">squares</span></code></pre>
+      </section>
+
+      <section id="used-technologies" class="used-technologies">
+        <h2>Использованные теги и CSS-свойства</h2>
+        <h3>HTML-теги · 52</h3>
+        <ul class="technology-list">
+          <li><code>a</code></li>
+          <li><code>abbr</code></li>
+          <li><code>b</code></li>
+          <li><code>blockquote</code></li>
+          <li><code>body</code></li>
+          <li><code>caption</code></li>
+          <li><code>cite</code></li>
+          <li><code>code</code></li>
+          <li><code>dd</code></li>
+          <li><code>div</code></li>
+          <li><code>dl</code></li>
+          <li><code>dt</code></li>
+          <li><code>em</code></li>
+          <li><code>figcaption</code></li>
+          <li><code>figure</code></li>
+          <li><code>footer</code></li>
+          <li><code>h1</code></li>
+          <li><code>h2</code></li>
+          <li><code>h3</code></li>
+          <li><code>head</code></li>
+          <li><code>header</code></li>
+          <li><code>hr</code></li>
+          <li><code>html</code></li>
+          <li><code>i</code></li>
+          <li><code>img</code></li>
+          <li><code>kbd</code></li>
+          <li><code>li</code></li>
+          <li><code>link</code></li>
+          <li><code>main</code></li>
+          <li><code>mark</code></li>
+          <li><code>meta</code></li>
+          <li><code>nav</code></li>
+          <li><code>ol</code></li>
+          <li><code>p</code></li>
+          <li><code>pre</code></li>
+          <li><code>q</code></li>
+          <li><code>section</code></li>
+          <li><code>small</code></li>
+          <li><code>span</code></li>
+          <li><code>strong</code></li>
+          <li><code>sup</code></li>
+          <li><code>table</code></li>
+          <li><code>tbody</code></li>
+          <li><code>td</code></li>
+          <li><code>tfoot</code></li>
+          <li><code>th</code></li>
+          <li><code>thead</code></li>
+          <li><code>time</code></li>
+          <li><code>title</code></li>
+          <li><code>tr</code></li>
+          <li><code>u</code></li>
+          <li><code>ul</code></li>
+        </ul>
+        <h3>CSS-свойства · 56</h3>
+        <ul class="technology-list">
+          <li><code>align-items</code></li>
+          <li><code>background</code></li>
+          <li><code>background-color</code></li>
+          <li><code>border</code></li>
+          <li><code>border-bottom</code></li>
+          <li><code>border-bottom-color</code></li>
+          <li><code>border-collapse</code></li>
+          <li><code>border-color</code></li>
+          <li><code>border-left</code></li>
+          <li><code>border-radius</code></li>
+          <li><code>border-top</code></li>
+          <li><code>border-top-color</code></li>
+          <li><code>box-shadow</code></li>
+          <li><code>box-sizing</code></li>
+          <li><code>clear</code></li>
+          <li><code>color</code></li>
+          <li><code>column-gap</code></li>
+          <li><code>display</code></li>
+          <li><code>flex-wrap</code></li>
+          <li><code>float</code></li>
+          <li><code>font</code></li>
+          <li><code>font-display</code></li>
+          <li><code>font-family</code></li>
+          <li><code>font-size</code></li>
+          <li><code>font-style</code></li>
+          <li><code>font-weight</code></li>
+          <li><code>gap</code></li>
+          <li><code>height</code></li>
+          <li><code>hyphens</code></li>
+          <li><code>justify-content</code></li>
+          <li><code>line-height</code></li>
+          <li><code>list-style</code></li>
+          <li><code>list-style-image</code></li>
+          <li><code>list-style-position</code></li>
+          <li><code>margin</code></li>
+          <li><code>margin-bottom</code></li>
+          <li><code>margin-inline</code></li>
+          <li><code>margin-left</code></li>
+          <li><code>margin-right</code></li>
+          <li><code>margin-top</code></li>
+          <li><code>max-width</code></li>
+          <li><code>overflow</code></li>
+          <li><code>overflow-x</code></li>
+          <li><code>padding</code></li>
+          <li><code>padding-bottom</code></li>
+          <li><code>padding-left</code></li>
+          <li><code>row-gap</code></li>
+          <li><code>scroll-behavior</code></li>
+          <li><code>scroll-padding-top</code></li>
+          <li><code>src</code></li>
+          <li><code>tab-size</code></li>
+          <li><code>text-align</code></li>
+          <li><code>text-decoration-style</code></li>
+          <li><code>text-underline-offset</code></li>
+          <li><code>white-space</code></li>
+          <li><code>width</code></li>
+        </ul>
+        <p><a href="#top">↑ Наверх</a></p>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>Ruby · История, возможности и примеры</p>
+      <p>Лабораторная работа №1, вариант 7</p>
+    </footer>
+  </body>
+</html>

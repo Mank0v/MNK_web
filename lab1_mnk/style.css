@@ -1,0 +1,364 @@
+@font-face {
+  font-family: "Inra";
+  src: url("./fonts/Inra.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  padding: 0 clamp(16px, 4vw, 48px);
+  background-color: #fbf1f1;
+  color: #3a2528;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  border-top: 12px solid #a91401;
+  border-bottom: 18px solid #a91401;
+}
+
+header,
+nav,
+main {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+.versions-table thead th {
+  font-family: "Inra", Arial, sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 36px 0 8px;
+  color: #7a0e00;
+  font-size: 24px;
+  text-align: center;
+}
+
+h2 {
+  margin: 0 0 16px;
+  padding-left: 12px;
+  border-left: 4px solid #e4a11b;
+  color: #a91401;
+  font-size: 18px;
+}
+
+h3 {
+  margin: 20px 0 10px;
+  color: #7a0e00;
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  color: #6d4f52;
+  text-align: center;
+}
+
+a {
+  color: #b3200d;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #5c0a00;
+  text-decoration-style: wavy;
+}
+
+nav {
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  padding: 20px 28px;
+  border: 1px solid #ecc8c4;
+  border-radius: 14px;
+  background-color: #f7dedb;
+}
+
+nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 36px;
+  row-gap: 8px;
+  margin: 0;
+  padding-left: 24px;
+}
+
+main section {
+  margin-bottom: 24px;
+  padding: clamp(18px, 3vw, 32px);
+  border: 1px solid #ecd5d3;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 5px 18px rgb(120 30 20 / 8%);
+  overflow: hidden;
+}
+
+/* картинки */
+figure {
+  margin: 0 0 12px;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 6px;
+  color: #6d4f52;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+.figure-left {
+  float: left;
+  width: 200px;
+  margin-right: 24px;
+}
+
+.figure-right {
+  float: right;
+  width: 170px;
+  margin-left: 24px;
+}
+
+.figure-center {
+  clear: both;
+  width: fit-content;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+blockquote {
+  margin: 16px 0;
+  padding: 10px 16px;
+  border-left: 4px solid #a91401;
+  background-color: #fbf1f1;
+}
+
+mark {
+  background-color: #ffe08a;
+  padding: 0 3px;
+}
+
+kbd {
+  padding: 1px 6px;
+  border: 1px solid #c9b2b0;
+  border-radius: 4px;
+  background-color: #f4eaea;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 13px;
+}
+
+code {
+  font-family: Consolas, Monaco, monospace;
+  color: #a91401;
+}
+
+dt {
+  font-weight: bold;
+  color: #7a0e00;
+}
+
+dd {
+  margin-bottom: 8px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dashed #d9b7b3;
+}
+
+.note {
+  margin: 0;
+  color: #6d4f52;
+}
+
+/* списки */
+.gem-list {
+  list-style-image: url("./images/ruby-icon.png");
+  list-style-position: outside;
+}
+
+.gem-list li {
+  padding-left: 4px;
+  margin-bottom: 4px;
+}
+
+section ul,
+section ol {
+  font-size: 14px;
+}
+
+/* таблица */
+.table-wrapper {
+  clear: both;
+  max-width: 720px;
+  margin-inline: auto;
+  overflow-x: auto;
+}
+
+.versions-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #222;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.versions-table caption {
+  padding-bottom: 4px;
+  font-size: 11px;
+  text-align: right;
+}
+
+.versions-table th,
+.versions-table td {
+  padding: 8px 10px;
+  border: 1px solid #7f9fd0;
+  text-align: left;
+}
+
+.versions-table thead,
+.versions-table tfoot {
+  background-color: #577fb8;
+  color: #fff;
+}
+
+.versions-table thead th {
+  border-color: #577fb8;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.versions-table tbody tr:nth-child(odd) {
+  background-color: #dce5f1;
+}
+
+.versions-table tbody tr:nth-child(odd) td {
+  border-color: #dce5f1;
+}
+
+.versions-table tbody tr:nth-child(odd) td,
+.versions-table tbody tr:nth-child(odd) th {
+  border-top-color: #7f9fd0;
+  border-bottom-color: #7f9fd0;
+}
+
+.versions-table th:first-child {
+  width: 30px;
+  text-align: center;
+}
+
+.versions-table th:last-child,
+.versions-table td:last-child:not([colspan]) {
+  text-align: right;
+}
+
+.versions-table tbody td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.versions-table tfoot td {
+  border-color: #577fb8;
+  font-size: 11px;
+  text-align: left;
+}
+
+/* подсветка кода (тема в стиле Dracula) */
+.code-lines {
+  box-sizing: border-box;
+  margin: 0 0 20px;
+  padding: 16px 20px;
+  overflow-x: auto;
+  border-left: 4px solid #ff5555;
+  border-radius: 10px;
+  background: #282a36;
+  color: #f8f8f2;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  tab-size: 2;
+}
+
+.code-lines code {
+  color: inherit;
+  font: inherit;
+}
+
+.c-keyword { color: #ff79c6; }
+.c-string { color: #f1fa8c; }
+.c-number { color: #bd93f9; }
+.c-comment { color: #6272a4; font-style: italic; }
+.c-method { color: #50fa7b; }
+.c-class { color: #8be9fd; }
+.c-variable { color: #ffb86c; }
+.c-symbol { color: #bd93f9; }
+.c-ivar { color: #ff9ac1; }
+
+/* список тегов и свойств */
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.technology-list li {
+  padding: 4px 9px;
+  border: 1px solid #ecc8c4;
+  border-radius: 6px;
+  background-color: #fbf1f1;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: 1000px;
+  margin: 32px auto 0;
+  padding: 12px 0;
+  border-top: 1px solid #ecc8c4;
+  color: #6d4f52;
+  font-size: 13px;
+}
+
+.page-footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .figure-left,
+  .figure-right {
+    float: none;
+    margin: 0 auto 12px;
+  }
+}
