@@ -1,0 +1,25 @@
+/* all: unset сбрасывает дефолтный margin у body без свойства margin */
+body{
+	all: unset;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.number{
+	display: flex;
+	gap: 40px;
+}
+/* цифра — сетка 5×7 из квадратов 40×40 */
+.digit{
+	display: flex;
+	flex-wrap: wrap;
+	width: 200px;
+}
+.cell{
+	width: 40px;
+	height: 40px;
+}
+.fill{
+	background: #000;
+}

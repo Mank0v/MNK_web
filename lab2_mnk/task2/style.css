@@ -1,0 +1,304 @@
+/* ===== Сетка на Flexbox (по мотивам example/css/grid.css) ===== */
+body{
+	margin: 0;
+	background: #000;
+}
+div{
+	box-sizing: border-box;
+}
+.container{
+	width: 100%;
+	margin: 0 auto;
+	background: #fff;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+/* ячейка: белая рамка 15px, как в example */
+.block-1,.block-2,
+.block-md-1,.block-md-2,
+.block-lg-1,.block-lg-2{
+	width: 100%;
+	border: 15px solid #fff;
+	background: #f00;
+}
+.col-1{
+	width: 8.33333%;
+}
+.col-2{
+	width: 16.66667%;
+}
+.col-3{
+	width: 25%;
+}
+.col-4{
+	width: 33.33333%;
+}
+.col-5{
+	width: 41.66667%;
+}
+.col-6{
+	width: 50%;
+}
+.col-7{
+	width: 58.33333%;
+}
+.col-8{
+	width: 66.66667%;
+}
+.col-9{
+	width: 75%;
+}
+.col-10{
+	width: 83.33333%;
+}
+.col-11{
+	width: 91.66667%;
+}
+.col-12{
+	width: 100%;
+}
+.block-1{
+	height: 150px;
+}
+.block-2{
+	height: 300px;
+}
+.pull-left-1{
+	margin-left: 8.33333%;
+}
+.pull-left-2{
+	margin-left: 16.66667%;
+}
+.pull-left-3{
+	margin-left: 25%;
+}
+.pull-left-4{
+	margin-left: 33.33333%;
+}
+.d-none{
+	display: none;
+}
+.d-block{
+	display: block;
+}
+.order-first{
+	order: -1;
+}
+@media (min-width: 768px){
+	.container{
+		width: 768px;
+	}
+	.col-md-1{
+		width: 8.33333%;
+	}
+	.col-md-2{
+		width: 16.66667%;
+	}
+	.col-md-3{
+		width: 25%;
+	}
+	.col-md-4{
+		width: 33.33333%;
+	}
+	.col-md-5{
+		width: 41.66667%;
+	}
+	.col-md-6{
+		width: 50%;
+	}
+	.col-md-7{
+		width: 58.33333%;
+	}
+	.col-md-8{
+		width: 66.66667%;
+	}
+	.col-md-9{
+		width: 75%;
+	}
+	.col-md-10{
+		width: 83.33333%;
+	}
+	.col-md-11{
+		width: 91.66667%;
+	}
+	.col-md-12{
+		width: 100%;
+	}
+	.block-md-1{
+		height: 150px;
+	}
+	.block-md-2{
+		height: 300px;
+	}
+	.pull-left-md-1{
+		margin-left: 8.33333%;
+	}
+	.pull-left-md-2{
+		margin-left: 16.66667%;
+	}
+	.pull-left-md-3{
+		margin-left: 25%;
+	}
+	.pull-left-md-4{
+		margin-left: 33.33333%;
+	}
+	.d-md-none{
+		display: none;
+	}
+	.d-md-block{
+		display: block;
+	}
+	.order-md-first{
+		order: -1;
+	}
+}
+@media (min-width: 1200px){
+	.container{
+		width: 1200px;
+	}
+	.col-lg-1{
+		width: 8.33333%;
+	}
+	.col-lg-2{
+		width: 16.66667%;
+	}
+	.col-lg-3{
+		width: 25%;
+	}
+	.col-lg-4{
+		width: 33.33333%;
+	}
+	.col-lg-5{
+		width: 41.66667%;
+	}
+	.col-lg-6{
+		width: 50%;
+	}
+	.col-lg-7{
+		width: 58.33333%;
+	}
+	.col-lg-8{
+		width: 66.66667%;
+	}
+	.col-lg-9{
+		width: 75%;
+	}
+	.col-lg-10{
+		width: 83.33333%;
+	}
+	.col-lg-11{
+		width: 91.66667%;
+	}
+	.col-lg-12{
+		width: 100%;
+	}
+	.block-lg-1{
+		height: 150px;
+	}
+	.block-lg-2{
+		height: 300px;
+	}
+	.pull-left-lg-1{
+		margin-left: 8.33333%;
+	}
+	.pull-left-lg-2{
+		margin-left: 16.66667%;
+	}
+	.pull-left-lg-3{
+		margin-left: 25%;
+	}
+	.pull-left-lg-4{
+		margin-left: 33.33333%;
+	}
+	.d-lg-none{
+		display: none;
+	}
+	.d-lg-block{
+		display: block;
+	}
+	.order-lg-first{
+		order: -1;
+	}
+}
+
+/* ===== Цвета блоков (номера из task.html) ===== */
+.cl-10{
+	background: #cd5c5c;
+}
+.cl-11{
+	background: #dc143c;
+}
+.cl-12{
+	background: #8b0000;
+}
+.cl-20{
+	background: #ffc0cb;
+}
+.cl-21{
+	background: #ff69b4;
+}
+.cl-22{
+	background: #c71585;
+}
+.cl-30{
+	background: #adff2f;
+}
+.cl-31{
+	background: #00ff00;
+}
+.cl-32{
+	background: #32cd32;
+}
+.cl-33{
+	background: #00fa9a;
+}
+.cl-34{
+	background: #2e8b57;
+}
+.cl-35{
+	background: #006400;
+}
+.cl-36{
+	background: #9acd32;
+}
+.cl-37{
+	background: #808000;
+}
+.cl-38{
+	background: #66cdaa;
+}
+.cl-39{
+	background: #556b2f;
+}
+.cl-40{
+	background: #008080;
+}
+.cl-50{
+	background: #ffa07a;
+}
+.cl-51{
+	background: #ff4500;
+}
+.cl-52{
+	background: #ffa500;
+}
+.cl-60{
+	background: #bc8f8f;
+}
+.cl-61{
+	background: #f4a460;
+}
+.cl-62{
+	background: #d2691e;
+}
+.cl-63{
+	background: #8b4513;
+}
+.cl-64{
+	background: #a52a2a;
+}
+.cl-65{
+	background: #800000;
+}
