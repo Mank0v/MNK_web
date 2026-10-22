@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    background-color: #f4ece9;
+}
+
+.wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    border-radius: 6px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #8b3a4a;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #d9c5c0;
+    border-radius: 6px;
+}
+
+legend {
+    padding: 0 8px;
+    font-weight: bold;
+    color: #8b3a4a;
+}
+
+/* Десктоп: подпись слева, поле справа */
+.field {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+    font-family: inherit;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+}
+
+.field textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.options label {
+    margin-right: 15px;
+}
+
+.options input {
+    width: auto;
+}
+
+.agree {
+    margin-bottom: 20px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    padding: 10px 30px;
+    margin: 0 5px;
+    font-size: 14px;
+    border: 1px solid #8b3a4a;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #8b3a4a;
+    color: #ffffff;
+}
+
+button[type="reset"] {
+    background-color: #ffffff;
+    color: #8b3a4a;
+}
+
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .wrapper {
+        padding: 10px 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .field {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    /* label скрываем, подпись берётся из placeholder */
+    .field label {
+        display: none;
+    }
+
+    /* у даты, select и radio placeholder нет, поэтому подпись оставляем */
+    .field.visible > label,
+    .field.visible .title {
+        display: block;
+        font-size: 12px;
+        color: #777777;
+    }
+
+    .options label {
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .field input,
+    .field select {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
