@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 5 — вариант 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Лабораторная работа 5 · Вариант 7</h1>
+
+    <section>
+        <h2>Задание 1</h2>
+        <p class="task">Дано число k (от 1 до 300) и последовательность 100101102103…198199.
+            Вывести k-ю цифру этой последовательности.</p>
+        <input type="number" id="k" min="1" max="300" value="7">
+        <button id="btn1">Найти цифру</button>
+        <div id="res1" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Задание 2</h2>
+        <p class="task">
+            <b>А.</b> Без методов Array: сумма элементов от первого элемента, косинус которого положителен, до конца массива.<br>
+            <b>Б.</b> С методами Array: удалить элементы, у которых цифры модуля целой части образуют
+            возрастающую арифметическую прогрессию (например 12, 135, 2468).
+        </p>
+        <input type="text" id="arr" value="3.5 -2.1 12.7 0.5 135 -246.9 7 2.8 100 369.4">
+        <button id="btn2a">Часть А</button>
+        <button id="btn2b">Часть Б</button>
+        <div id="res2a" class="result"></div>
+        <div id="res2b" class="result"></div>
+    </section>
+
+    <section>
+        <h2>Задание 4</h2>
+        <p class="task">Дан массив слов. Проверить, что первая буква каждого слова равна последней букве предыдущего слова.</p>
+        <input type="text" id="words" value="арбуз зебра апельсин нос сок">
+        <button id="btn4">Проверить</button>
+        <div id="res4" class="result"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
