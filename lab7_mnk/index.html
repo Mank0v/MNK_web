@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="header">
+      <span class="brand">CALC</span>
+      <div class="model">
+        <span class="model-name">LC-07</span>
+        <span class="model-sub">AUTO POWER OFF</span>
+      </div>
+    </div>
+
+    <div class="display">
+      <span class="indicator" id="indicator"></span>
+      <span class="screen" id="screen">0</span>
+    </div>
+
+    <div class="keys">
+      <button class="key red"  data-action="clear">C</button>
+      <button class="key blue" data-action="clear-entry">CE</button>
+      <button class="key blue" data-action="backspace">&larr;</button>
+      <button class="key blue" data-action="sqrt">&radic;</button>
+
+      <button class="key blue" data-action="negate">&plusmn;</button>
+      <button class="key blue" data-action="inverse">1/x</button>
+      <button class="key blue" data-action="percent">%</button>
+      <button class="key blue" data-op="/">&divide;</button>
+
+      <button class="key white" data-digit="7">7</button>
+      <button class="key white" data-digit="8">8</button>
+      <button class="key white" data-digit="9">9</button>
+      <button class="key blue"  data-op="*">&times;</button>
+
+      <button class="key white" data-digit="4">4</button>
+      <button class="key white" data-digit="5">5</button>
+      <button class="key white" data-digit="6">6</button>
+      <button class="key blue"  data-op="-">&minus;</button>
+
+      <button class="key white" data-digit="1">1</button>
+      <button class="key white" data-digit="2">2</button>
+      <button class="key white" data-digit="3">3</button>
+      <button class="key blue plus" data-op="+">+</button>
+
+      <button class="key white" data-digit="0">0</button>
+      <button class="key white" data-action="dot">&middot;</button>
+      <button class="key blue"  data-action="equals">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
